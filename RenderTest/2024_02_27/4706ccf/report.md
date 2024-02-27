@@ -1,8 +1,8 @@
 # Render Test Report
 
-* Generation Time (UTC): 2024-02-27 01:51:00.123827+00:00
+* Generation Time (UTC): 2024-02-27 04:46:57.321403+00:00
 * 43 cases, 43 passed (100.000000%)
-* Total time spent: 1279 seconds
+* Total time spent: 1394 seconds
 
 Note that timing is wall-clock time estimated *per-worker*. Depending on the settings, a worker could be a thread or process, etc. If the tests are run in parallel, timing can be higher than its sequential counterpart.
 
@@ -11,7 +11,7 @@ Note that timing is wall-clock time estimated *per-worker*. Depending on the set
 * OS: Windows
 * CPU: Intel64 Family 6 Model 79 Stepping 1, GenuineIntel (12 logical, 6 physical)
 * RAM: 127.913 GiB installed
-* Disk: 931.51 GiB total, 581.03 GiB available, 350.48 GiB used
+* Disk: 931.51 GiB total, 581.02 GiB available, 350.49 GiB used
 
 ## Failed Tests (0)
 
@@ -19,16 +19,16 @@ All tests passed.
 
 ## Passed Tests (43)
 
-* [(3) Test Checkerboard Emissive Quad (26s)](#test-checkerboard-emissive-quad)
-* [(6) Test Environment Map (50s)](#test-environment-map)
+* [(3) Test Checkerboard Emissive Quad (28s)](#test-checkerboard-emissive-quad)
+* [(6) Test Environment Map (55s)](#test-environment-map)
 * [(3) Test Fullscreen Unit Radiance (1s)](#test-fullscreen-unit-radiance)
-* [(4) Test Gray Furnace Box (117s)](#test-gray-furnace-box)
-* [(5) Test Lerped Lambertian Diffuse (282s)](#test-lerped-lambertian-diffuse)
-* [(8) Test Single Ply Mesh (337s)](#test-single-ply-mesh)
-* [(7) Test Threading Cornell Box With Gold Sphere (306s)](#test-threading-cornell-box-with-gold-sphere)
-* [(2) Test White 100W Point Light (85s)](#test-white-100w-point-light)
-* [(3) Test White 100W Rect Area Light (62s)](#test-white-100w-rect-area-light)
-* [(2) Test White 100W Small Rect Area Light (9s)](#test-white-100w-small-rect-area-light)
+* [(4) Test Gray Furnace Box (129s)](#test-gray-furnace-box)
+* [(5) Test Lerped Lambertian Diffuse (308s)](#test-lerped-lambertian-diffuse)
+* [(8) Test Single Ply Mesh (352s)](#test-single-ply-mesh)
+* [(7) Test Threading Cornell Box With Gold Sphere (341s)](#test-threading-cornell-box-with-gold-sphere)
+* [(2) Test White 100W Point Light (93s)](#test-white-100w-point-light)
+* [(3) Test White 100W Rect Area Light (71s)](#test-white-100w-rect-area-light)
+* [(2) Test White 100W Small Rect Area Light (11s)](#test-white-100w-small-rect-area-light)
 
 ## Test Checkerboard Emissive Quad
 
@@ -40,27 +40,27 @@ Contains 3 test case(s) (BNEEPT, BVPT, SPPM).
 
 ### (1/3) Case BNEEPT: *\<PASSED\>*
 
-Time spent: 14 seconds.
+Time spent: 15 seconds.
 
 |  Output  |  Reference  |
 | :------: | :---------: |
-|    ![output image](tests.test_checkerboard_emissive_quad\bneept.jpg)    |      ![reference image](tests.test_checkerboard_emissive_quad\ref.jpg)     |
+|    ![output image](tests.test_checkerboard_emissive_quad/bneept.jpg)    |      ![reference image](tests.test_checkerboard_emissive_quad/ref.jpg)     |
 
 #### Debug Output
 
-![debug output image](tests.test_checkerboard_emissive_quad\bneept_error.jpg)
+![debug output image](tests.test_checkerboard_emissive_quad/bneept_error.jpg)
 
 ### (2/3) Case BVPT: *\<PASSED\>*
 
-Time spent: 9 seconds.
+Time spent: 10 seconds.
 
 |  Output  |  Reference  |
 | :------: | :---------: |
-|    ![output image](tests.test_checkerboard_emissive_quad\bvpt.jpg)    |      ![reference image](tests.test_checkerboard_emissive_quad\ref.jpg)     |
+|    ![output image](tests.test_checkerboard_emissive_quad/bvpt.jpg)    |      ![reference image](tests.test_checkerboard_emissive_quad/ref.jpg)     |
 
 #### Debug Output
 
-![debug output image](tests.test_checkerboard_emissive_quad\bvpt_error.jpg)
+![debug output image](tests.test_checkerboard_emissive_quad/bvpt_error.jpg)
 
 ### (3/3) Case SPPM: *\<PASSED\>*
 
@@ -68,11 +68,11 @@ Time spent: 3 seconds.
 
 |  Output  |  Reference  |
 | :------: | :---------: |
-|    ![output image](tests.test_checkerboard_emissive_quad\sppm.jpg)    |      ![reference image](tests.test_checkerboard_emissive_quad\ref.jpg)     |
+|    ![output image](tests.test_checkerboard_emissive_quad/sppm.jpg)    |      ![reference image](tests.test_checkerboard_emissive_quad/ref.jpg)     |
 
 #### Debug Output
 
-![debug output image](tests.test_checkerboard_emissive_quad\sppm_error.jpg)
+![debug output image](tests.test_checkerboard_emissive_quad/sppm_error.jpg)
 
 ## Test Environment Map
 
@@ -84,27 +84,27 @@ Contains 6 test case(s) (BNEEPT (debug map + sphere + shifted), BNEEPT (debug ma
 
 All settings are the same with "BNEEPT (debug map + sphere)" case, except the sphere and camera are shifted 2000 units in +x. The result should be the same as our environment map depends on view direction only.
 
-Time spent: 12 seconds.
+Time spent: 14 seconds.
 
 |  Output  |  Reference  |
 | :------: | :---------: |
-|    ![output image](tests.test_environment_map\debug_bneept_sphere_shifted.jpg)    |      ![reference image](tests.test_environment_map\ref_debug_sphere.jpg)     |
+|    ![output image](tests.test_environment_map/debug_bneept_sphere_shifted.jpg)    |      ![reference image](tests.test_environment_map/ref_debug_sphere.jpg)     |
 
 #### Debug Output
 
-![debug output image](tests.test_environment_map\debug_bneept_sphere_shifted_error.jpg)
+![debug output image](tests.test_environment_map/debug_bneept_sphere_shifted_error.jpg)
 
 ### (2/6) Case BNEEPT (debug map + sphere): *\<PASSED\>*
 
-Time spent: 12 seconds.
+Time spent: 13 seconds.
 
 |  Output  |  Reference  |
 | :------: | :---------: |
-|    ![output image](tests.test_environment_map\debug_bneept_sphere.jpg)    |      ![reference image](tests.test_environment_map\ref_debug_sphere.jpg)     |
+|    ![output image](tests.test_environment_map/debug_bneept_sphere.jpg)    |      ![reference image](tests.test_environment_map/ref_debug_sphere.jpg)     |
 
 #### Debug Output
 
-![debug output image](tests.test_environment_map\debug_bneept_sphere_error.jpg)
+![debug output image](tests.test_environment_map/debug_bneept_sphere_error.jpg)
 
 ### (3/6) Case BNEEPT (white map + sphere): *\<PASSED\>*
 
@@ -114,37 +114,37 @@ Time spent: 3 seconds.
 
 |  Output  |  Reference  |
 | :------: | :---------: |
-|    ![output image](tests.test_environment_map\white_bneept_sphere.jpg)    |      ![reference image](tests.test_environment_map\ref_white.jpg)     |
+|    ![output image](tests.test_environment_map/white_bneept_sphere.jpg)    |      ![reference image](tests.test_environment_map/ref_white.jpg)     |
 
 #### Debug Output
 
-![debug output image](tests.test_environment_map\white_bneept_sphere_error.jpg)
+![debug output image](tests.test_environment_map/white_bneept_sphere_error.jpg)
 
 ### (4/6) Case BVPT (debug map + sphere + shifted): *\<PASSED\>*
 
 All settings are the same with "BVPT (debug map + sphere)" case, except the sphere and camera are shifted 2000 units in +x. The result should be the same as our environment map depends on view direction only.
 
-Time spent: 9 seconds.
+Time spent: 11 seconds.
 
 |  Output  |  Reference  |
 | :------: | :---------: |
-|    ![output image](tests.test_environment_map\debug_bvpt_sphere_shifted.jpg)    |      ![reference image](tests.test_environment_map\ref_debug_sphere.jpg)     |
+|    ![output image](tests.test_environment_map/debug_bvpt_sphere_shifted.jpg)    |      ![reference image](tests.test_environment_map/ref_debug_sphere.jpg)     |
 
 #### Debug Output
 
-![debug output image](tests.test_environment_map\debug_bvpt_sphere_shifted_error.jpg)
+![debug output image](tests.test_environment_map/debug_bvpt_sphere_shifted_error.jpg)
 
 ### (5/6) Case BVPT (debug map + sphere): *\<PASSED\>*
 
-Time spent: 9 seconds.
+Time spent: 10 seconds.
 
 |  Output  |  Reference  |
 | :------: | :---------: |
-|    ![output image](tests.test_environment_map\debug_bvpt_sphere.jpg)    |      ![reference image](tests.test_environment_map\ref_debug_sphere.jpg)     |
+|    ![output image](tests.test_environment_map/debug_bvpt_sphere.jpg)    |      ![reference image](tests.test_environment_map/ref_debug_sphere.jpg)     |
 
 #### Debug Output
 
-![debug output image](tests.test_environment_map\debug_bvpt_sphere_error.jpg)
+![debug output image](tests.test_environment_map/debug_bvpt_sphere_error.jpg)
 
 ### (6/6) Case BVPT (white map + sphere): *\<PASSED\>*
 
@@ -154,11 +154,11 @@ Time spent: 2 seconds.
 
 |  Output  |  Reference  |
 | :------: | :---------: |
-|    ![output image](tests.test_environment_map\white_bvpt_sphere.jpg)    |      ![reference image](tests.test_environment_map\ref_white.jpg)     |
+|    ![output image](tests.test_environment_map/white_bvpt_sphere.jpg)    |      ![reference image](tests.test_environment_map/ref_white.jpg)     |
 
 #### Debug Output
 
-![debug output image](tests.test_environment_map\white_bvpt_sphere_error.jpg)
+![debug output image](tests.test_environment_map/white_bvpt_sphere_error.jpg)
 
 ## Test Fullscreen Unit Radiance
 
@@ -174,11 +174,11 @@ Time spent: 0 seconds.
 
 |  Output  |  Reference  |
 | :------: | :---------: |
-|    ![output image](tests.test_fullscreen_unit_radiance\bneept.jpg)    |      (no reference image)     |
+|    ![output image](tests.test_fullscreen_unit_radiance/bneept.jpg)    |      (no reference image)     |
 
 #### Debug Output
 
-![debug output image](tests.test_fullscreen_unit_radiance\bneept_error.jpg)
+![debug output image](tests.test_fullscreen_unit_radiance/bneept_error.jpg)
 
 ### (2/3) Case BVPT: *\<PASSED\>*
 
@@ -186,11 +186,11 @@ Time spent: 0 seconds.
 
 |  Output  |  Reference  |
 | :------: | :---------: |
-|    ![output image](tests.test_fullscreen_unit_radiance\bvpt.jpg)    |      (no reference image)     |
+|    ![output image](tests.test_fullscreen_unit_radiance/bvpt.jpg)    |      (no reference image)     |
 
 #### Debug Output
 
-![debug output image](tests.test_fullscreen_unit_radiance\bvpt_error.jpg)
+![debug output image](tests.test_fullscreen_unit_radiance/bvpt_error.jpg)
 
 ### (3/3) Case SPPM: *\<PASSED\>*
 
@@ -198,11 +198,11 @@ Time spent: 0 seconds.
 
 |  Output  |  Reference  |
 | :------: | :---------: |
-|    ![output image](tests.test_fullscreen_unit_radiance\sppm.jpg)    |      (no reference image)     |
+|    ![output image](tests.test_fullscreen_unit_radiance/sppm.jpg)    |      (no reference image)     |
 
 #### Debug Output
 
-![debug output image](tests.test_fullscreen_unit_radiance\sppm_error.jpg)
+![debug output image](tests.test_fullscreen_unit_radiance/sppm_error.jpg)
 
 ## Test Gray Furnace Box
 
@@ -214,15 +214,15 @@ Contains 4 test case(s) (BNEEPT Diffuse Sphere, BNEEPT Diffuse Sphere (Small Box
 
 ### (1/4) Case BNEEPT Diffuse Sphere: *\<PASSED\>*
 
-Time spent: 15 seconds.
+Time spent: 17 seconds.
 
 |  Output  |  Reference  |
 | :------: | :---------: |
-|    ![output image](tests.test_gray_furnace_box\bneept_diffuse_sphere.jpg)    |      (no reference image)     |
+|    ![output image](tests.test_gray_furnace_box/bneept_diffuse_sphere.jpg)    |      (no reference image)     |
 
 #### Debug Output
 
-![debug output image](tests.test_gray_furnace_box\bneept_diffuse_sphere_error.jpg)
+![debug output image](tests.test_gray_furnace_box/bneept_diffuse_sphere_error.jpg)
 
 Debug message: mean diff = -0.00034383, max pixel = 0.50813645, min pixel = 0.48957819
 
@@ -234,41 +234,41 @@ Time spent: 16 seconds.
 
 |  Output  |  Reference  |
 | :------: | :---------: |
-|    ![output image](tests.test_gray_furnace_box\bneept_diffuse_sphere_small_box.jpg)    |      (no reference image)     |
+|    ![output image](tests.test_gray_furnace_box/bneept_diffuse_sphere_small_box.jpg)    |      (no reference image)     |
 
 #### Debug Output
 
-![debug output image](tests.test_gray_furnace_box\bneept_diffuse_sphere_small_box_error.jpg)
+![debug output image](tests.test_gray_furnace_box/bneept_diffuse_sphere_small_box_error.jpg)
 
-Debug message: mean diff = -0.00001480, max pixel = 0.50597799, min pixel = 0.49351290
+Debug message: mean diff = 0.00001928, max pixel = 0.50707167, min pixel = 0.49288157
 
 ### (3/4) Case BVPT Diffuse Sphere: *\<PASSED\>*
 
-Time spent: 6 seconds.
+Time spent: 8 seconds.
 
 |  Output  |  Reference  |
 | :------: | :---------: |
-|    ![output image](tests.test_gray_furnace_box\bvpt_diffuse_sphere.jpg)    |      (no reference image)     |
+|    ![output image](tests.test_gray_furnace_box/bvpt_diffuse_sphere.jpg)    |      (no reference image)     |
 
 #### Debug Output
 
-![debug output image](tests.test_gray_furnace_box\bvpt_diffuse_sphere_error.jpg)
+![debug output image](tests.test_gray_furnace_box/bvpt_diffuse_sphere_error.jpg)
 
-Debug message: mean diff = -0.00000028, max pixel = 0.50000000, min pixel = 0.49972972
+Debug message: mean diff = -0.00000014, max pixel = 0.50000000, min pixel = 0.49983859
 
 ### (4/4) Case SPPM Diffuse Sphere: *\<PASSED\>*
 
-Time spent: 79 seconds.
+Time spent: 86 seconds.
 
 |  Output  |  Reference  |
 | :------: | :---------: |
-|    ![output image](tests.test_gray_furnace_box\sppm_diffuse_sphere.jpg)    |      (no reference image)     |
+|    ![output image](tests.test_gray_furnace_box/sppm_diffuse_sphere.jpg)    |      (no reference image)     |
 
 #### Debug Output
 
-![debug output image](tests.test_gray_furnace_box\sppm_diffuse_sphere_error.jpg)
+![debug output image](tests.test_gray_furnace_box/sppm_diffuse_sphere_error.jpg)
 
-Debug message: mean diff = -0.00043308, max pixel = 0.56301737, min pixel = 0.43421143
+Debug message: mean diff = -0.00082710, max pixel = 0.56042385, min pixel = 0.44292003
 
 ## Test Lerped Lambertian Diffuse
 
@@ -281,65 +281,65 @@ Contains 5 test case(s) (BNEEPT (factor = 0 percent), BNEEPT (factor = 50 percen
 
 This is a corner case where the lerping factor is 0 (0 * material_0 + 1 * material_0).
 
-Time spent: 70 seconds.
+Time spent: 77 seconds.
 
 |  Output  |  Reference  |
 | :------: | :---------: |
-|    ![output image](tests.test_lerped_lambertian_diffuse\bneept_factor0p0.jpg)    |      ![reference image](tests.test_lerped_lambertian_diffuse\ref.jpg)     |
+|    ![output image](tests.test_lerped_lambertian_diffuse/bneept_factor0p0.jpg)    |      ![reference image](tests.test_lerped_lambertian_diffuse/ref.jpg)     |
 
 #### Debug Output
 
-![debug output image](tests.test_lerped_lambertian_diffuse\bneept_factor0p0_error.jpg)
+![debug output image](tests.test_lerped_lambertian_diffuse/bneept_factor0p0_error.jpg)
 
 ### (2/5) Case BNEEPT (factor = 50 percent): *\<PASSED\>*
 
-Time spent: 78 seconds.
+Time spent: 87 seconds.
 
 |  Output  |  Reference  |
 | :------: | :---------: |
-|    ![output image](tests.test_lerped_lambertian_diffuse\bneept_factor0p5.jpg)    |      ![reference image](tests.test_lerped_lambertian_diffuse\ref.jpg)     |
+|    ![output image](tests.test_lerped_lambertian_diffuse/bneept_factor0p5.jpg)    |      ![reference image](tests.test_lerped_lambertian_diffuse/ref.jpg)     |
 
 #### Debug Output
 
-![debug output image](tests.test_lerped_lambertian_diffuse\bneept_factor0p5_error.jpg)
+![debug output image](tests.test_lerped_lambertian_diffuse/bneept_factor0p5_error.jpg)
 
 ### (3/5) Case BVPT (factor = 0 percent): *\<PASSED\>*
 
 This is a corner case where the lerping factor is 0 (0 * material_0 + 1 * material_0).
 
-Time spent: 44 seconds.
+Time spent: 48 seconds.
 
 |  Output  |  Reference  |
 | :------: | :---------: |
-|    ![output image](tests.test_lerped_lambertian_diffuse\bvpt_factor0p0.jpg)    |      ![reference image](tests.test_lerped_lambertian_diffuse\ref.jpg)     |
+|    ![output image](tests.test_lerped_lambertian_diffuse/bvpt_factor0p0.jpg)    |      ![reference image](tests.test_lerped_lambertian_diffuse/ref.jpg)     |
 
 #### Debug Output
 
-![debug output image](tests.test_lerped_lambertian_diffuse\bvpt_factor0p0_error.jpg)
+![debug output image](tests.test_lerped_lambertian_diffuse/bvpt_factor0p0_error.jpg)
 
 ### (4/5) Case BVPT (factor = 50 percent): *\<PASSED\>*
 
-Time spent: 45 seconds.
+Time spent: 48 seconds.
 
 |  Output  |  Reference  |
 | :------: | :---------: |
-|    ![output image](tests.test_lerped_lambertian_diffuse\bvpt_factor0p5.jpg)    |      ![reference image](tests.test_lerped_lambertian_diffuse\ref.jpg)     |
+|    ![output image](tests.test_lerped_lambertian_diffuse/bvpt_factor0p5.jpg)    |      ![reference image](tests.test_lerped_lambertian_diffuse/ref.jpg)     |
 
 #### Debug Output
 
-![debug output image](tests.test_lerped_lambertian_diffuse\bvpt_factor0p5_error.jpg)
+![debug output image](tests.test_lerped_lambertian_diffuse/bvpt_factor0p5_error.jpg)
 
 ### (5/5) Case BVPT (factor = 80 percent): *\<PASSED\>*
 
-Time spent: 42 seconds.
+Time spent: 46 seconds.
 
 |  Output  |  Reference  |
 | :------: | :---------: |
-|    ![output image](tests.test_lerped_lambertian_diffuse\bvpt_factor0p8.jpg)    |      ![reference image](tests.test_lerped_lambertian_diffuse\ref.jpg)     |
+|    ![output image](tests.test_lerped_lambertian_diffuse/bvpt_factor0p8.jpg)    |      ![reference image](tests.test_lerped_lambertian_diffuse/ref.jpg)     |
 
 #### Debug Output
 
-![debug output image](tests.test_lerped_lambertian_diffuse\bvpt_factor0p8_error.jpg)
+![debug output image](tests.test_lerped_lambertian_diffuse/bvpt_factor0p8_error.jpg)
 
 ## Test Single Ply Mesh
 
@@ -353,95 +353,95 @@ Time spent: 10 seconds.
 
 |  Output  |  Reference  |
 | :------: | :---------: |
-|    ![output image](tests.test_single_ply_mesh\quad_bneept.jpg)    |      ![reference image](tests.test_single_ply_mesh\ref_quad.jpg)     |
+|    ![output image](tests.test_single_ply_mesh/quad_bneept.jpg)    |      ![reference image](tests.test_single_ply_mesh/ref_quad.jpg)     |
 
 #### Debug Output
 
-![debug output image](tests.test_single_ply_mesh\quad_bneept_error.jpg)
+![debug output image](tests.test_single_ply_mesh/quad_bneept_error.jpg)
 
 ### (2/8) Case Quad (BNEEPT, ASCII): *\<PASSED\>*
 
-Time spent: 6 seconds.
+Time spent: 7 seconds.
 
 |  Output  |  Reference  |
 | :------: | :---------: |
-|    ![output image](tests.test_single_ply_mesh\quad_bneept_ascii.jpg)    |      ![reference image](tests.test_single_ply_mesh\ref_quad.jpg)     |
+|    ![output image](tests.test_single_ply_mesh/quad_bneept_ascii.jpg)    |      ![reference image](tests.test_single_ply_mesh/ref_quad.jpg)     |
 
 #### Debug Output
 
-![debug output image](tests.test_single_ply_mesh\quad_bneept_ascii_error.jpg)
+![debug output image](tests.test_single_ply_mesh/quad_bneept_ascii_error.jpg)
 
 ### (3/8) Case Quad (BVPT): *\<PASSED\>*
+
+Time spent: 10 seconds.
+
+|  Output  |  Reference  |
+| :------: | :---------: |
+|    ![output image](tests.test_single_ply_mesh/quad_bvpt.jpg)    |      ![reference image](tests.test_single_ply_mesh/ref_quad.jpg)     |
+
+#### Debug Output
+
+![debug output image](tests.test_single_ply_mesh/quad_bvpt_error.jpg)
+
+### (4/8) Case Quad (BVPT, ASCII): *\<PASSED\>*
 
 Time spent: 4 seconds.
 
 |  Output  |  Reference  |
 | :------: | :---------: |
-|    ![output image](tests.test_single_ply_mesh\quad_bvpt.jpg)    |      ![reference image](tests.test_single_ply_mesh\ref_quad.jpg)     |
+|    ![output image](tests.test_single_ply_mesh/quad_bvpt_ascii.jpg)    |      ![reference image](tests.test_single_ply_mesh/ref_quad.jpg)     |
 
 #### Debug Output
 
-![debug output image](tests.test_single_ply_mesh\quad_bvpt_error.jpg)
-
-### (4/8) Case Quad (BVPT, ASCII): *\<PASSED\>*
-
-Time spent: 5 seconds.
-
-|  Output  |  Reference  |
-| :------: | :---------: |
-|    ![output image](tests.test_single_ply_mesh\quad_bvpt_ascii.jpg)    |      ![reference image](tests.test_single_ply_mesh\ref_quad.jpg)     |
-
-#### Debug Output
-
-![debug output image](tests.test_single_ply_mesh\quad_bvpt_ascii_error.jpg)
+![debug output image](tests.test_single_ply_mesh/quad_bvpt_ascii_error.jpg)
 
 ### (5/8) Case Quad (SPPM): *\<PASSED\>*
 
-Time spent: 140 seconds.
+Time spent: 144 seconds.
 
 |  Output  |  Reference  |
 | :------: | :---------: |
-|    ![output image](tests.test_single_ply_mesh\quad_sppm.jpg)    |      ![reference image](tests.test_single_ply_mesh\ref_quad.jpg)     |
+|    ![output image](tests.test_single_ply_mesh/quad_sppm.jpg)    |      ![reference image](tests.test_single_ply_mesh/ref_quad.jpg)     |
 
 #### Debug Output
 
-![debug output image](tests.test_single_ply_mesh\quad_sppm_error.jpg)
+![debug output image](tests.test_single_ply_mesh/quad_sppm_error.jpg)
 
 ### (6/8) Case Suzanne (BNEEPT): *\<PASSED\>*
 
-Time spent: 20 seconds.
+Time spent: 19 seconds.
 
 |  Output  |  Reference  |
 | :------: | :---------: |
-|    ![output image](tests.test_single_ply_mesh\suzanne_bneept.jpg)    |      ![reference image](tests.test_single_ply_mesh\ref_suzanne.jpg)     |
+|    ![output image](tests.test_single_ply_mesh/suzanne_bneept.jpg)    |      ![reference image](tests.test_single_ply_mesh/ref_suzanne.jpg)     |
 
 #### Debug Output
 
-![debug output image](tests.test_single_ply_mesh\suzanne_bneept_error.jpg)
+![debug output image](tests.test_single_ply_mesh/suzanne_bneept_error.jpg)
 
 ### (7/8) Case Suzanne (BVPT): *\<PASSED\>*
 
-Time spent: 9 seconds.
+Time spent: 10 seconds.
 
 |  Output  |  Reference  |
 | :------: | :---------: |
-|    ![output image](tests.test_single_ply_mesh\suzanne_bvpt.jpg)    |      ![reference image](tests.test_single_ply_mesh\ref_suzanne.jpg)     |
+|    ![output image](tests.test_single_ply_mesh/suzanne_bvpt.jpg)    |      ![reference image](tests.test_single_ply_mesh/ref_suzanne.jpg)     |
 
 #### Debug Output
 
-![debug output image](tests.test_single_ply_mesh\suzanne_bvpt_error.jpg)
+![debug output image](tests.test_single_ply_mesh/suzanne_bvpt_error.jpg)
 
 ### (8/8) Case Suzanne (SPPM): *\<PASSED\>*
 
-Time spent: 141 seconds.
+Time spent: 144 seconds.
 
 |  Output  |  Reference  |
 | :------: | :---------: |
-|    ![output image](tests.test_single_ply_mesh\suzanne_sppm.jpg)    |      ![reference image](tests.test_single_ply_mesh\ref_suzanne.jpg)     |
+|    ![output image](tests.test_single_ply_mesh/suzanne_sppm.jpg)    |      ![reference image](tests.test_single_ply_mesh/ref_suzanne.jpg)     |
 
 #### Debug Output
 
-![debug output image](tests.test_single_ply_mesh\suzanne_sppm_error.jpg)
+![debug output image](tests.test_single_ply_mesh/suzanne_sppm_error.jpg)
 
 ## Test Threading Cornell Box With Gold Sphere
 
@@ -451,51 +451,51 @@ Contains 7 test case(s) (BNEEPT (1) 1T, BNEEPT (2) 2T, BNEEPT (3) 5T, BNEEPT (4)
 
 ### (1/7) Case BNEEPT (1) 1T: *\<PASSED\>*
 
-Time spent: 130 seconds.
+Time spent: 152 seconds.
 
 |  Output  |  Reference  |
 | :------: | :---------: |
-|    ![output image](tests.test_threading_cornell_box_with_gold_sphere\bneept_1t.jpg)    |      ![reference image](tests.test_threading_cornell_box_with_gold_sphere\ref.jpg)     |
+|    ![output image](tests.test_threading_cornell_box_with_gold_sphere/bneept_1t.jpg)    |      ![reference image](tests.test_threading_cornell_box_with_gold_sphere/ref.jpg)     |
 
 #### Debug Output
 
-![debug output image](tests.test_threading_cornell_box_with_gold_sphere\bneept_error_1t.jpg)
+![debug output image](tests.test_threading_cornell_box_with_gold_sphere/bneept_error_1t.jpg)
 
 ### (2/7) Case BNEEPT (2) 2T: *\<PASSED\>*
 
-Time spent: 68 seconds.
+Time spent: 75 seconds.
 
 |  Output  |  Reference  |
 | :------: | :---------: |
-|    ![output image](tests.test_threading_cornell_box_with_gold_sphere\bneept_2t.jpg)    |      ![reference image](tests.test_threading_cornell_box_with_gold_sphere\ref.jpg)     |
+|    ![output image](tests.test_threading_cornell_box_with_gold_sphere/bneept_2t.jpg)    |      ![reference image](tests.test_threading_cornell_box_with_gold_sphere/ref.jpg)     |
 
 #### Debug Output
 
-![debug output image](tests.test_threading_cornell_box_with_gold_sphere\bneept_error_2t.jpg)
+![debug output image](tests.test_threading_cornell_box_with_gold_sphere/bneept_error_2t.jpg)
 
 ### (3/7) Case BNEEPT (3) 5T: *\<PASSED\>*
 
-Time spent: 22 seconds.
+Time spent: 25 seconds.
 
 |  Output  |  Reference  |
 | :------: | :---------: |
-|    ![output image](tests.test_threading_cornell_box_with_gold_sphere\bneept_5t.jpg)    |      ![reference image](tests.test_threading_cornell_box_with_gold_sphere\ref.jpg)     |
+|    ![output image](tests.test_threading_cornell_box_with_gold_sphere/bneept_5t.jpg)    |      ![reference image](tests.test_threading_cornell_box_with_gold_sphere/ref.jpg)     |
 
 #### Debug Output
 
-![debug output image](tests.test_threading_cornell_box_with_gold_sphere\bneept_error_5t.jpg)
+![debug output image](tests.test_threading_cornell_box_with_gold_sphere/bneept_error_5t.jpg)
 
 ### (4/7) Case BNEEPT (4) 8T: *\<PASSED\>*
 
-Time spent: 39 seconds.
+Time spent: 42 seconds.
 
 |  Output  |  Reference  |
 | :------: | :---------: |
-|    ![output image](tests.test_threading_cornell_box_with_gold_sphere\bneept_8t.jpg)    |      ![reference image](tests.test_threading_cornell_box_with_gold_sphere\ref.jpg)     |
+|    ![output image](tests.test_threading_cornell_box_with_gold_sphere/bneept_8t.jpg)    |      ![reference image](tests.test_threading_cornell_box_with_gold_sphere/ref.jpg)     |
 
 #### Debug Output
 
-![debug output image](tests.test_threading_cornell_box_with_gold_sphere\bneept_error_8t.jpg)
+![debug output image](tests.test_threading_cornell_box_with_gold_sphere/bneept_error_8t.jpg)
 
 ### (5/7) Case BNEEPT (5) 17T: *\<PASSED\>*
 
@@ -503,35 +503,35 @@ Time spent: 19 seconds.
 
 |  Output  |  Reference  |
 | :------: | :---------: |
-|    ![output image](tests.test_threading_cornell_box_with_gold_sphere\bneept_17t.jpg)    |      ![reference image](tests.test_threading_cornell_box_with_gold_sphere\ref.jpg)     |
+|    ![output image](tests.test_threading_cornell_box_with_gold_sphere/bneept_17t.jpg)    |      ![reference image](tests.test_threading_cornell_box_with_gold_sphere/ref.jpg)     |
 
 #### Debug Output
 
-![debug output image](tests.test_threading_cornell_box_with_gold_sphere\bneept_error_17t.jpg)
+![debug output image](tests.test_threading_cornell_box_with_gold_sphere/bneept_error_17t.jpg)
 
 ### (6/7) Case BNEEPT (6) 64T: *\<PASSED\>*
 
-Time spent: 13 seconds.
+Time spent: 14 seconds.
 
 |  Output  |  Reference  |
 | :------: | :---------: |
-|    ![output image](tests.test_threading_cornell_box_with_gold_sphere\bneept_64t.jpg)    |      ![reference image](tests.test_threading_cornell_box_with_gold_sphere\ref.jpg)     |
+|    ![output image](tests.test_threading_cornell_box_with_gold_sphere/bneept_64t.jpg)    |      ![reference image](tests.test_threading_cornell_box_with_gold_sphere/ref.jpg)     |
 
 #### Debug Output
 
-![debug output image](tests.test_threading_cornell_box_with_gold_sphere\bneept_error_64t.jpg)
+![debug output image](tests.test_threading_cornell_box_with_gold_sphere/bneept_error_64t.jpg)
 
 ### (7/7) Case BNEEPT (7) 100T: *\<PASSED\>*
 
-Time spent: 12 seconds.
+Time spent: 11 seconds.
 
 |  Output  |  Reference  |
 | :------: | :---------: |
-|    ![output image](tests.test_threading_cornell_box_with_gold_sphere\bneept_100t.jpg)    |      ![reference image](tests.test_threading_cornell_box_with_gold_sphere\ref.jpg)     |
+|    ![output image](tests.test_threading_cornell_box_with_gold_sphere/bneept_100t.jpg)    |      ![reference image](tests.test_threading_cornell_box_with_gold_sphere/ref.jpg)     |
 
 #### Debug Output
 
-![debug output image](tests.test_threading_cornell_box_with_gold_sphere\bneept_error_100t.jpg)
+![debug output image](tests.test_threading_cornell_box_with_gold_sphere/bneept_error_100t.jpg)
 
 ## Test White 100W Point Light
 
@@ -544,27 +544,27 @@ Contains 2 test case(s) (BNEEPT, SPPM).
 
 ### (1/2) Case BNEEPT: *\<PASSED\>*
 
-Time spent: 61 seconds.
+Time spent: 66 seconds.
 
 |  Output  |  Reference  |
 | :------: | :---------: |
-|    ![output image](tests.test_white_100W_point_light\bneept.jpg)    |      ![reference image](tests.test_white_100W_point_light\ref.jpg)     |
+|    ![output image](tests.test_white_100W_point_light/bneept.jpg)    |      ![reference image](tests.test_white_100W_point_light/ref.jpg)     |
 
 #### Debug Output
 
-![debug output image](tests.test_white_100W_point_light\bneept_error.jpg)
+![debug output image](tests.test_white_100W_point_light/bneept_error.jpg)
 
 ### (2/2) Case SPPM: *\<PASSED\>*
 
-Time spent: 23 seconds.
+Time spent: 27 seconds.
 
 |  Output  |  Reference  |
 | :------: | :---------: |
-|    ![output image](tests.test_white_100W_point_light\sppm.jpg)    |      ![reference image](tests.test_white_100W_point_light\ref.jpg)     |
+|    ![output image](tests.test_white_100W_point_light/sppm.jpg)    |      ![reference image](tests.test_white_100W_point_light/ref.jpg)     |
 
 #### Debug Output
 
-![debug output image](tests.test_white_100W_point_light\sppm_error.jpg)
+![debug output image](tests.test_white_100W_point_light/sppm_error.jpg)
 
 ## Test White 100W Rect Area Light
 
@@ -574,15 +574,15 @@ Contains 3 test case(s) (BNEEPT, BVPT, SPPM).
 
 ### (1/3) Case BNEEPT: *\<PASSED\>*
 
-Time spent: 27 seconds.
+Time spent: 35 seconds.
 
 |  Output  |  Reference  |
 | :------: | :---------: |
-|    ![output image](tests.test_white_100W_rect_area_light\bneept.jpg)    |      ![reference image](tests.test_white_100W_rect_area_light\ref.jpg)     |
+|    ![output image](tests.test_white_100W_rect_area_light/bneept.jpg)    |      ![reference image](tests.test_white_100W_rect_area_light/ref.jpg)     |
 
 #### Debug Output
 
-![debug output image](tests.test_white_100W_rect_area_light\bneept_error.jpg)
+![debug output image](tests.test_white_100W_rect_area_light/bneept_error.jpg)
 
 ### (2/3) Case BVPT: *\<PASSED\>*
 
@@ -590,11 +590,11 @@ Time spent: 32 seconds.
 
 |  Output  |  Reference  |
 | :------: | :---------: |
-|    ![output image](tests.test_white_100W_rect_area_light\bvpt.jpg)    |      ![reference image](tests.test_white_100W_rect_area_light\ref.jpg)     |
+|    ![output image](tests.test_white_100W_rect_area_light/bvpt.jpg)    |      ![reference image](tests.test_white_100W_rect_area_light/ref.jpg)     |
 
 #### Debug Output
 
-![debug output image](tests.test_white_100W_rect_area_light\bvpt_error.jpg)
+![debug output image](tests.test_white_100W_rect_area_light/bvpt_error.jpg)
 
 ### (3/3) Case SPPM: *\<PASSED\>*
 
@@ -602,11 +602,11 @@ Time spent: 2 seconds.
 
 |  Output  |  Reference  |
 | :------: | :---------: |
-|    ![output image](tests.test_white_100W_rect_area_light\sppm.jpg)    |      ![reference image](tests.test_white_100W_rect_area_light\ref.jpg)     |
+|    ![output image](tests.test_white_100W_rect_area_light/sppm.jpg)    |      ![reference image](tests.test_white_100W_rect_area_light/ref.jpg)     |
 
 #### Debug Output
 
-![debug output image](tests.test_white_100W_rect_area_light\sppm_error.jpg)
+![debug output image](tests.test_white_100W_rect_area_light/sppm_error.jpg)
 
 ## Test White 100W Small Rect Area Light
 
@@ -619,25 +619,25 @@ Contains 2 test case(s) (BNEEPT, SPPM).
 
 ### (1/2) Case BNEEPT: *\<PASSED\>*
 
-Time spent: 5 seconds.
+Time spent: 6 seconds.
 
 |  Output  |  Reference  |
 | :------: | :---------: |
-|    ![output image](tests.test_white_100W_small_rect_area_light\bneept.jpg)    |      ![reference image](tests.test_white_100W_small_rect_area_light\ref.jpg)     |
+|    ![output image](tests.test_white_100W_small_rect_area_light/bneept.jpg)    |      ![reference image](tests.test_white_100W_small_rect_area_light/ref.jpg)     |
 
 #### Debug Output
 
-![debug output image](tests.test_white_100W_small_rect_area_light\bneept_error.jpg)
+![debug output image](tests.test_white_100W_small_rect_area_light/bneept_error.jpg)
 
 ### (2/2) Case SPPM: *\<PASSED\>*
 
-Time spent: 3 seconds.
+Time spent: 4 seconds.
 
 |  Output  |  Reference  |
 | :------: | :---------: |
-|    ![output image](tests.test_white_100W_small_rect_area_light\sppm.jpg)    |      ![reference image](tests.test_white_100W_small_rect_area_light\ref.jpg)     |
+|    ![output image](tests.test_white_100W_small_rect_area_light/sppm.jpg)    |      ![reference image](tests.test_white_100W_small_rect_area_light/ref.jpg)     |
 
 #### Debug Output
 
-![debug output image](tests.test_white_100W_small_rect_area_light\sppm_error.jpg)
+![debug output image](tests.test_white_100W_small_rect_area_light/sppm_error.jpg)
 
